@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Hebrew:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-custom-gradient {
+  background: linear-gradient(90deg, #481658 10%, #773d75 20%, #69348f 100%);
+}
+.bg-custom-color {
+  background: linear-gradient(270deg,#F2D8DD 0%,#FFF 100%);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+
+@keyframes dropdown-open {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes dropdown-close {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.95);
+  }
+}
+
+.dropdown-animation-open {
+  animation: dropdown-open 300ms ease-out forwards;
+  transform-origin: top;
+}
+
+.dropdown-animation-close {
+  animation: dropdown-close 200ms ease-in forwards;
+  transform-origin: top;
+}

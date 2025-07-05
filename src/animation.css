@@ -1,0 +1,74 @@
+
+.overlay {
+    width: 100%;
+    height: 110vh;
+    background-image: url("./assets/internal/curve.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure it stays behind text and images */
+  }
+  
+
+  
+  /* Adjust the viewport height on mobile to exclude browser UI */
+  @media (max-width: 768px) {
+    .overlay {
+      height: 95vh; 
+    }
+    .h-screen{
+      height: 100vh;
+    }
+  }
+  @media (max-width: 576px) {
+    .overlay {
+      height: 82vh; 
+    }
+    
+  
+  }
+
+ 
+  
+  /* Left section styling for text and buttons */
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem; /* Adjust padding to give more left margin */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+    z-index: 30;
+  }
+  
+  /* Right section styling for animated image */
+  .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    overflow: hidden;
+  }
+  
+  /* Animated image styling */
+  .animated-image {
+    margin-top: 120px;
+    width: 100%; /* Increased size for better visibility */
+    max-width: 900px; /* Further increased maximum size */
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  /* Float animation for image */
+  @keyframes float {
+    0% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(25px);
+    }
+  }
+
+  
+  
